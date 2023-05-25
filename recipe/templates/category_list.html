@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+  <h1>Category List</h1>
+  <ul>
+    {% for category, n in categories_and_number_of_recipes %}
+      <li>{{ category.name }}: {{ n }}</li>
+    {% empty %}
+      <li>No categories found.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
